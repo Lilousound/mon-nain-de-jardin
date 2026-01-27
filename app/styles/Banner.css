@@ -1,8 +1,8 @@
 .banner{
-  color: black;
+  color: var(--main-color);
   text-align: right;
   padding: 32px;
-  border-bottom: solid 3px black;
+  border-bottom: solid 3px #2D4616;
   display: flex;
   align-items: center;
   gap: 30px;
