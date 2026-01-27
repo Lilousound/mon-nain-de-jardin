@@ -1,0 +1,19 @@
+.banner{
+  color: black;
+  text-align: right;
+  padding: 32px;
+  border-bottom: solid 3px black;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.banner h1{
+  font-size: 3rem;
+  margin: 0;
+  font-family: Brush Script MT , sans-serif;
+}
+
+.banner-logo{
+  width: 80px;
+  height: auto;
+}
