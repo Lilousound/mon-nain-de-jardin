@@ -3,19 +3,21 @@ export const nainsList = [
       "id": 1,
       "name": "Nain à la pipe",
       "category": "Classique",
-      "price": 29.99
+      "price": 29.99,
+      isSpecialOffer: true
     },
     {
       "id": 2,
       "name": "Nain zen",
       "category": "Moderne",
-      "price": 34.99
+      "price": 34.99,
     },
     {
       "id": 3,
       "name": "Nain à la pelle",
       "category": "Classique",
-      "price": 27.50
+      "price": 27.50,
+      isSpecialOffer: true
     },
     {
       "id": 4,
@@ -27,7 +29,8 @@ export const nainsList = [
       "id": 5,
       "name": "Nain pêcheur",
       "category": "Thématique",
-      "price": 32.99
+      "price": 32.99,
+      isSpecialOffer: true
     },
     {
       "id": 6,
