@@ -1,5 +1,6 @@
 import { nainsList } from '../datas/nainsList'
 import '../styles/ShoppingList.css'
+import GnomeItem from './GnomeItem'
 
 export function ShoppingList() {
   const categories = nainsList.reduce(
@@ -14,12 +15,16 @@ export function ShoppingList() {
         <li key={cat}>{cat}</li> )}
       </ul>
       <ul className="nains-list">
-        {nainsList.map((nain) =>
-          <li key={nain.id} className="nain-item">
-            {nain.name}
-            {nain.isSpecialOffer && <div className="special-offer">Offre spéciale</div>}
-          </li>
-          )}
+        {nainsList.map(({ id, cover, name, resistance, rarity }) => (
+          <GnomeItem
+            key={id}
+						cover={cover}
+						name={name}
+						resistance={resistance}
+						rarity={rarity}
+          />
+        )
+      )}
       </ul>
     </div>
 
