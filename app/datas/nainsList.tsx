@@ -17,7 +17,7 @@ export const nainsList = [
       "category": "Moderne",
       "price": 34.99,
       resistance: 2,
-      rarity: 1,
+      rarity: 2,
       cover: nain_lampe
     },
     {
