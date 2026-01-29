@@ -1,0 +1,11 @@
+.footer {
+  border-top: 3px solid var(--foreground);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+.footer input {
+  height: 20px;
+}
