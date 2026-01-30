@@ -1,9 +1,10 @@
 /* @import "tailwindcss"; */
 
 :root {
-  --background: #f3fbf2;
+  --background: #f5f9f4;
   --foreground: #171717;
-  --green: #6D9035;
+  --main-green: #6D9035;
+  --light-green: #E1ECB9;
   --primary-font: 'Roboto', Arial, sans-serif;
 }
 
@@ -29,4 +30,17 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--primary-font);
+}
+.button {
+  margin: 10px 0;
+  padding: 6px;
+  background-color: var(--light-green);
+  border: none;
+  border-radius: 6px;
+}
+.button:hover{
+  background-color: #c0d291;
+}
+.button:active {
+  background-color: #94a56a;
 }

@@ -1,8 +1,9 @@
 .nains-list {
+  list-style-type: none;
   padding: 40px;
   display: flex;
   flex-wrap: wrap;
-	max-width: 800px;
   gap: 50px;
   list-style-type: none;
+  justify-content: center;
 }

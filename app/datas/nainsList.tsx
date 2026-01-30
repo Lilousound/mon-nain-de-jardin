@@ -1,4 +1,10 @@
 import nain_lampe from '../assets/nain_lampe.jpg'
+import nain_pelle from '../assets/nain_pelle.jpg'
+import nain_pipe from '../assets/nain_pipe.jpg'
+import nain_zen from '../assets/nain_zen.jpg'
+import nain_brouette from '../assets/nain_brouette.jpg'
+import nain_surfeur from '../assets/nain_surfeur.jpg'
+
 
 export const nainsList = [
   {
@@ -9,7 +15,7 @@ export const nainsList = [
       isSpecialOffer: true,
       resistance: 1,
       rarity: 1,
-      cover: nain_lampe
+      cover: nain_pipe
     },
     {
       "id": 2,
@@ -18,7 +24,7 @@ export const nainsList = [
       "price": 34.99,
       resistance: 2,
       rarity: 2,
-      cover: nain_lampe
+      cover: nain_zen
     },
     {
       "id": 3,
@@ -28,7 +34,7 @@ export const nainsList = [
       isSpecialOffer: true,
       resistance: 2,
       rarity: 1,
-      cover: nain_lampe
+      cover: nain_pelle
     },
     {
       "id": 4,
@@ -41,21 +47,21 @@ export const nainsList = [
     },
     {
       "id": 5,
-      "name": "Nain pêcheur",
+      "name": "Nain à la brouette",
       "category": "Thématique",
       "price": 32.99,
       isSpecialOffer: true,
       resistance: 2,
       rarity: 2,
-      cover: nain_lampe
+      cover: nain_brouette
     },
     {
       "id": 6,
-      "name": "Nain musicien",
+      "name": "Nain surfeur",
       "category": "Thématique",
       "price": 45.00,
       resistance: 3,
       rarity: 1,
-      cover: nain_lampe
+      cover: nain_surfeur
     }
   ]
