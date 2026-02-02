@@ -1,4 +1,5 @@
-"use client";
+// @ts-nocheck
+// "use client";
 import { nainsList } from '../datas/nainsList'
 import '../styles/ShoppingList.css'
 import GnomeItem from './GnomeItem'

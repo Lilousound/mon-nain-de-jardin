@@ -2,7 +2,7 @@
   padding: 20px 20px;
   color: white;
   background-color: var(--main-green);
-  width: 240px;
+  width: 260px;
   display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -50,11 +50,15 @@
   text-align: left;
 }
 .cart-closed{
-  width: 250px;
+  width: 310px;
   text-align: center;
 }
 .cart-closed button {
   color: black;
   font-size: 3rem;
   margin: 20px 0;
+}
+.trash{
+  width: 20px;
+  height: 20px;
 }

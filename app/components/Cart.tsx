@@ -1,11 +1,30 @@
+// @ts-nocheck
 'use client';
 import '../styles/Cart.css'
 import { useState } from 'react';
+import Image from 'next/image'
+import trash from "../assets/trash.png"
 
 function Cart({cart, updateCart}) {
   const [isOpen, setIsOpen] = useState(false);
   const totalCart = cart.reduce((acc, item) => acc + item.price * item.amount, 0);
 
+  function removeItem(item) {
+    if (item.amount > 1) {
+        //nouveau tableau avec la quantité diminuée de 1
+    const newCart = cart.map((gnome) => { //parcours le panier
+      if (gnome.name === item.name) { //trouve l'article à diminuer
+        return { ...gnome, amount: gnome.amount - 1 }; //retourne une copie de l'article avec la quantité diminuée
+      } else { //pour les autres articles
+        return gnome; //retourne l'article tel quel s'il n'est pas celui à diminuer
+      }
+    });
+    updateCart(newCart); //met à jour le panier
+  } else if (item.amount === 1) {
+    const itemInCart = cart.filter((gnome) => gnome.name !== item.name);
+    updateCart(itemInCart);
+  }
+  }
 
   return ( isOpen ? (<div className="cart">
             <button className="toggle-button" onClick={() => setIsOpen(false)}>X Fermer le panier</button>
@@ -19,9 +38,8 @@ function Cart({cart, updateCart}) {
                   </div>
                   <div className="cart-item-price">
                     <span><em>{item.price}€</em></span>
-                    <span className="cart-item-trash">✗</span>
+                    <span className="cart-item-trash" onClick={() => removeItem(item)}><Image src={trash} alt='Poubelle' className='trash' /></span>
                   </div>
-
                 </div>
               ))}
             </div>
