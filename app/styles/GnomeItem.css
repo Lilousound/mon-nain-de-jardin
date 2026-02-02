@@ -2,7 +2,7 @@
   height: 220px;
   width: 220px;
   border-radius: 10px;
-  margin-bottom: 35px;
+  margin-bottom: 75px;
 }
 .gnome-item-cover{
   height: 100%;
@@ -12,4 +12,11 @@
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+}
+.gnome-item-infos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: -15px;
+  margin-top: -10px;
 }
