@@ -37,10 +37,14 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--light-green);
   border: none;
   border-radius: 6px;
+  border: 1px solid var(--main-green);
 }
 .button:hover{
   background-color: #c0d291;
 }
 .button:active {
   background-color: #94a56a;
+}
+.button-selected {
+  border: 0.7mm ridge var(--main-green);
 }

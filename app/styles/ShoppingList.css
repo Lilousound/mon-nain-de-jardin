@@ -1,9 +1,12 @@
 .nains-list {
   list-style-type: none;
-  padding: 40px;
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
   list-style-type: none;
-  justify-content: center;
+  justify-content: flex-start;
+}
+.shopping-list {
+  width: 100%;
+  margin: 20px;
 }

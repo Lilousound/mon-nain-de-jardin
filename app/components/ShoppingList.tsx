@@ -3,13 +3,18 @@
 import { nainsList } from '../datas/nainsList'
 import '../styles/ShoppingList.css'
 import GnomeItem from './GnomeItem'
+import Categories from './Categories'
+import { useState } from 'react'
 
 export function ShoppingList({ cart, updateCart }) {
-  const categories = nainsList.reduce(
-    (acc, nain) =>
-      acc.includes(nain.category) ? acc : acc.concat(nain.category),
-    []
-  )
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  let nainsListFiltered = [];
+  if (selectedCategory === null){
+    nainsListFiltered = nainsList;
+  } else {
+     nainsListFiltered = nainsList.filter((nain) => nain.category === selectedCategory)
+  }
+
   function addToCart(name, price) {
     //vérifie si l'article est déjà dans le panier
     const cartItem = cart.find((item) => item.name === name)
@@ -30,13 +35,11 @@ export function ShoppingList({ cart, updateCart }) {
 
   }
   return (
-    <div>
-      <ul>
-        {categories.map((cat) =>
-        <li key={cat}>{cat}</li> )}
-      </ul>
+    <div className="shopping-list">
+      <Categories selectedCategory={selectedCategory}
+                  setSelectedCategory={setSelectedCategory}/>
       <ul className="nains-list">
-        {nainsList.map(({ id, cover, name, resistance, rarity, price }) => (
+        {nainsListFiltered.map(({ id, cover, name, resistance, rarity, price }) => (
           <div key={id}>
             <GnomeItem key={id} cover={cover} name={name} price={price} resistance={resistance} rarity={rarity}/>
             <button className="button" onClick={() => addToCart(name, price)}>Ajouter</button>

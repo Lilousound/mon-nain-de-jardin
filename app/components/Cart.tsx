@@ -6,7 +6,7 @@ import Image from 'next/image'
 import trash from "../assets/trash.png"
 
 function Cart({cart, updateCart}) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const totalCart = cart.reduce((acc, item) => acc + item.price * item.amount, 0);
 
   function removeItem(item) {
