@@ -14,8 +14,12 @@ export default function Home() {
 
       <div>
         <Banner>
-          <Image src={logo} alt='Logo' className='banner-logo' />
-          <h1>Mon Nain de Jardin</h1>
+            <Image src={logo} alt='Logo' className='banner-logo' />
+            <div className="banner-title">
+              <h1>Mon Nain de Jardin</h1>
+              <p>Choisissez le nain qui vous convient</p>
+             </div>
+
         </Banner>
         <div className="main-layout">
           <Cart cart={cart} updateCart={updateCart}/>

@@ -1,11 +1,11 @@
 .cart{
-  padding: 20px 20px;
+  padding: 20px 15px;
   color: white;
   background-color: var(--main-green);
   display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-  width: 220px;
+  width: 330px;
   overflow-x: hidden;
 }
 #cart-total {
@@ -17,13 +17,16 @@
   overflow-x: hidden;
 }
 .cart-item {
+  width: 97%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 10px 0;
-  border: 1px solid var(--foreground);
+  /* border: 1px solid var(--foreground); */
   padding: 10px;
   border-radius: 5px;
+  background-color: #84a63f;
+  box-shadow: 5px 5px 5px rgba(35, 63, 46, 0.517);
 }
 .cart-item-name {
   display: flex;
@@ -52,7 +55,7 @@
   text-align: left;
 }
 .cart-closed{
-  width: 268px; /* +48px de cart*/
+  width: 308px;
   text-align: center;
 }
 .cart-closed button {

@@ -1,19 +1,30 @@
 .banner{
   color: var(--main-color);
-  text-align: right;
-  padding: 32px;
-  border-bottom: solid 3px #2D4616;
   display: flex;
   align-items: center;
+  text-align: right;
+  background-image: url(../assets/background.jpg);
+  background-position: center;
+  padding: 32px;
+}
+.banner-title {
   gap: 30px;
+  padding: 0 30px;
 }
 .banner h1{
-  font-size: 3rem;
-  margin: 0;
+  font-size: 5em;
+  margin: 0 20px;
   font-family: Brush Script MT , sans-serif;
+  color: #ffffff;
+  text-shadow: 1px 3px 10px rgba(166, 225, 161, 0.702);
 }
-
 .banner-logo{
-  width: 80px;
+  width: 100px;
   height: auto;
+}
+.banner p {
+ color: #ffffff;
+ font-style: italic;
+ text-align: left;
+padding: 0 20px;
 }
