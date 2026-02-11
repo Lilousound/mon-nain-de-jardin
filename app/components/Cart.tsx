@@ -1,13 +1,16 @@
 // @ts-nocheck
 'use client';
 import '../styles/Cart.css'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image'
 import trash from "../assets/trash.png"
 
 function Cart({cart, updateCart}) {
   const [isOpen, setIsOpen] = useState(true);
   const totalCart = cart.reduce((acc, item) => acc + item.price * item.amount, 0);
+  useEffect(() => {
+      document.title = `Panier: ${totalCart}€ d'achats`
+  }, [totalCart])
 
   function removeItem(item) {
     if (item.amount > 1) {
