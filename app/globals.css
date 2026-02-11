@@ -43,6 +43,7 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
   border-radius: 6px;
   border: 1px solid var(--main-green);
+  cursor: pointer
 }
 .button:hover{
   background-color: #c0d291;

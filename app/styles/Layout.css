@@ -4,3 +4,19 @@
 .attributes {
   cursor: pointer;
 }
+.attributes {
+  position: relative; /* Nécessaire pour positionner le tooltip */
+}
+.tooltip {
+  position: absolute;
+  top: 0%; /* Positionne le tooltip au-dessus de l'élément */
+  left: 20%;
+  background-color: rgb(11, 58, 11);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap; /* Empêche le texte de revenir à la ligne */
+  z-index: 10; /* Assure que le tooltip est au-dessus des autres éléments */
+  margin-bottom: 5px; /* Espace entre le tooltip et les icônes */
+}

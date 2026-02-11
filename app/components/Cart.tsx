@@ -1,18 +1,31 @@
-// @ts-nocheck
 'use client';
 import '../styles/Cart.css'
 import { useState, useEffect } from 'react';
 import Image from 'next/image'
 import trash from "../assets/trash.png"
 
-function Cart({cart, updateCart}) {
+interface CartProps {
+  cart: {
+    name: string;
+    price: number;
+    amount: number;
+  }[];
+  updateCart: (newCart: CartProps['cart']) => void;
+}
+
+function Cart({cart, updateCart}: CartProps) {
   const [isOpen, setIsOpen] = useState(true);
   const totalCart = cart.reduce((acc, item) => acc + item.price * item.amount, 0);
   useEffect(() => {
       document.title = `Panier: ${totalCart}€ d'achats`
   }, [totalCart])
 
-  function removeItem(item) {
+  interface CartItem {
+    name: string;
+    price: number;
+    amount: number;
+  }
+  function removeItem(item: CartItem) {
     if (item.amount > 1) {
         //nouveau tableau avec la quantité diminuée de 1
     const newCart = cart.map((gnome) => { //parcours le panier

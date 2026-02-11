@@ -47,6 +47,7 @@
 }
 .cart-item-trash {
   padding: 5px;
+  cursor: pointer;
 }
 .toggle-button {
   background: none;

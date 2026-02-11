@@ -3,7 +3,7 @@
   width: 220px;
   border-radius: 10px;
   margin-bottom: 75px;
-
+  cursor: context-menu;
 }
 .gnome-item-cover{
   height: 100%;

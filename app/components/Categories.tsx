@@ -1,7 +1,12 @@
 import { nainsList } from "../datas/nainsList"
 import '../styles/Categories.css'
 
-function Categories({ selectedCategory, setSelectedCategory}) {
+interface CategoriesProps {
+  selectedCategory: string | null;
+  setSelectedCategory: (category: string | null) => void;
+}
+
+function Categories({ selectedCategory, setSelectedCategory}: CategoriesProps) {
   const categories = nainsList.reduce(
     (acc, nain) =>
       acc.includes(nain.category) ? acc : acc.concat(nain.category),
