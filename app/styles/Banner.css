@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   text-align: right;
-  background-image: url(../assets/background.jpg);
+  background-image: linear-gradient(rgba(12, 32, 4, 0.447),rgba(17, 39, 25, 0.25)), url(../assets/background.jpg);
   background-position: center;
   padding: 32px;
 }
@@ -26,5 +26,5 @@
  color: #ffffff;
  font-style: italic;
  text-align: left;
-padding: 0 20px;
+ padding: 0 20px;
 }

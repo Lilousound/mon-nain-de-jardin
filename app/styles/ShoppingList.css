@@ -4,11 +4,12 @@
   flex-wrap: wrap;
   gap: 50px;
   list-style-type: none;
-  justify-content: flex-start;
+  justify-content: center;
 }
 .shopping-list {
-  width: 90%;
-  margin: 20px 60px;
+  width: 70%;
+  margin: 20px auto;
+  padding: 10px;
 }
 .add-cart {
   cursor: copy;

@@ -5,7 +5,7 @@
   --foreground: #171717;
   --main-green: #6D9035;
   --light-green: #E1ECB9;
-  --primary-font: 'Roboto', Arial, sans-serif;
+  --primary-font: 'Verdana', Arial, sans-serif;
 }
 
 /* @theme inline {
@@ -53,4 +53,57 @@ h1, h2, h3, h4, h5, h6 {
 }
 .button-selected {
   border: 0.7mm ridge var(--main-green);
+}
+
+
+/* ! MEDIA QUERIES */
+/* Media Queries */
+@media screen and (max-width: 960px) {
+  body .banner .banner-title h1{
+    font-size: 3em;
+  }
+  body .banner-logo{
+  width: 70px;
+  }
+  body .banner {
+    padding: 20px;
+  }
+  body .categories {
+    gap: 30px;
+    justify-content: center;
+    margin: 0 0 30px 0px;
+  }
+  body .trolley {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media screen and (max-width: 720px) {
+  body .banner p {
+    font-size: 0.9em;
+  }
+  body .banner {
+    padding: 15px;
+  }
+  body .categories {
+    gap: 10px;
+  }
+  body .cart {
+    position: absolute;
+    z-index: 1000;
+  }
+  body .trolley {
+    width: 70px;
+    height: 70px;
+  }
+}
+@media screen and (max-width: 540px) {
+   body .banner .banner-title h1{
+    font-size: 2.5em ;
+  }
+  body .trolley {
+    width: 60px;
+    height: 60px;
+  }
+
 }

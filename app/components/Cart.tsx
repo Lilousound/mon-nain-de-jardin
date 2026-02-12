@@ -3,6 +3,7 @@ import '../styles/Cart.css'
 import { useState, useEffect } from 'react';
 import Image from 'next/image'
 import trash from "../assets/trash.png"
+import shoppingCart from "../assets/shopping-cart.png"
 
 interface CartProps {
   cart: {
@@ -14,7 +15,7 @@ interface CartProps {
 }
 
 function Cart({cart, updateCart}: CartProps) {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const totalCart = cart.reduce((acc, item) => acc + item.price * item.amount, 0);
   useEffect(() => {
       document.title = `Panier: ${totalCart}€ d'achats`
@@ -65,7 +66,7 @@ function Cart({cart, updateCart}: CartProps) {
           </div>
     ) : (
       <div className="cart-closed">
-        <button className="toggle-button" onClick={() => setIsOpen(true)}>🛒</button>
+        <span className="toggle-button" onClick={() => setIsOpen(true)}><Image src={shoppingCart} alt='Panier' className='trolley'/></span>
       </div>
       ))
 
