@@ -1,15 +1,15 @@
 'use client';
 import "../styles/Footer.css"
-import { useState } from 'react';
+import { useState, ChangeEvent } from 'react';
 
 
 function Footer() {
   const [inputValue, setInputValue] = useState('');
 
-  function handleInput(e) {
+  function handleInput(e: ChangeEvent<HTMLInputElement>) {
     setInputValue(e.target.value)
   }
-  function handleSubmit(inputValue) {
+  function handleSubmit(inputValue: string) {
     alert(`Vous êtes inscrit à notre newsletter avec l'adresse: ${inputValue}`)
   }
   return <div className="footer">

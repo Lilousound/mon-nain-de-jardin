@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import '../styles/Layout.css'
-import { GnomeAttributesScaleProps } from '../types';
+import { GnomeAttributesScaleProps, QuantityLabels } from '../types';
 
 
 function GnomeAttributesScale ({ scaleValue, specificity }: GnomeAttributesScaleProps) {
@@ -9,7 +9,7 @@ function GnomeAttributesScale ({ scaleValue, specificity }: GnomeAttributesScale
   const range =[1, 2, 3]
   const scaleType =
     specificity === 'rarity' ? ('💎') : ('🔨')
-  const quantityLabel = {
+  const quantityLabel: QuantityLabels = {
     1: "faible",
     2: "bonne",
     3: "grande"

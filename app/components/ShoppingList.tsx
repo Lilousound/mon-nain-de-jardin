@@ -5,8 +5,9 @@ import Categories from './Categories'
 import { useState } from 'react'
 import { ShoppingListProps } from '../types'
 
+
 export function ShoppingList({ cart, updateCart }: ShoppingListProps) {
-  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);;
   let nainsListFiltered = [];
   if (selectedCategory === null){
     nainsListFiltered = nainsList;
@@ -40,7 +41,7 @@ export function ShoppingList({ cart, updateCart }: ShoppingListProps) {
       <ul className="nains-list">
         {nainsListFiltered.map(({ id, cover, name, resistance, rarity, price, description }) => (
           <div key={id}>
-            <GnomeItem key={id} cover={cover} name={name} price={price} resistance={resistance} rarity={rarity} description={description}/>
+            <GnomeItem id={id} cover={cover} name={name} price={price} resistance={resistance} rarity={rarity} description={description}/>
             <button className="button add-cart" onClick={() => addToCart(name, price)}>Ajouter</button>
           </div>
         )

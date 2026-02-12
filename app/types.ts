@@ -1,3 +1,5 @@
+import { StaticImageData } from 'next/image';
+
 export interface BannerProps {
   children: React.ReactNode;
 }
@@ -23,7 +25,7 @@ export interface GnomeAttributesScaleProps {
 
 export interface GnomeItemProps {
   name: string;
-  cover: string;
+  cover: string | StaticImageData;
   id: number;
   resistance: number;
   rarity: number;
@@ -36,7 +38,7 @@ export interface GnomeModalProps {
   onClose: () => void;
   name: string;
   price: number;
-  cover: string;
+  cover: string | StaticImageData;
   resistance: number;
   rarity: number;
   description: string;
@@ -50,3 +52,7 @@ export interface ShoppingListProps {
   }[];
   updateCart: (newCart: ShoppingListProps['cart']) => void;
 }
+
+export type QuantityLabels = {
+  [key: number]: string;
+};
