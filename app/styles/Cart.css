@@ -74,3 +74,22 @@
   width: 20px;
   height: 20px;
 }
+.button-empty, .button-validate {
+  width: 250px;
+  margin: 10px auto;
+  border: 2px solid var(--foreground);
+}
+.button-empty {
+  margin-top: 30px;
+  background-color: var(--foreground);
+  border: 2px solid #c0d291;
+  color: #c0d291;
+}
+.button-empty:hover{
+  background-color: var(--foreground);
+  font-style: italic;
+}
+.button-validate {
+  padding: 10px;
+  font-weight: bolder;
+}

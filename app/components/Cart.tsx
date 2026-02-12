@@ -62,7 +62,8 @@ function Cart({cart, updateCart}: CartProps) {
             </div>
             <div id="cart-total">Total: {totalCart.toFixed(2)}€</div>  {/* limité à 2 chiffres après la virgule */}
             <div><em>Articles dans le panier: {cart.reduce((acc, item) => acc + item.amount, 0)}</em></div>
-            <button className="button" onClick={() => updateCart([])}>Vider le panier</button>
+            <button className="button button-empty" onClick={() => updateCart([])}>Vider le panier</button>
+            <button className="button button-validate" onClick={() => {alert('Vous allez procéder au paiement')}}>VALIDER LE PANIER</button>
           </div>
     ) : (
       <div className="cart-closed">
