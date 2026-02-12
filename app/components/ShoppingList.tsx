@@ -3,15 +3,7 @@ import '../styles/ShoppingList.css'
 import GnomeItem from './GnomeItem'
 import Categories from './Categories'
 import { useState } from 'react'
-
-interface ShoppingListProps {
-  cart: {
-    name: string;
-    price: number;
-    amount: number;
-  }[];
-  updateCart: (newCart: ShoppingListProps['cart']) => void;
-}
+import { ShoppingListProps } from '../types'
 
 export function ShoppingList({ cart, updateCart }: ShoppingListProps) {
   const [selectedCategory, setSelectedCategory] = useState(null);

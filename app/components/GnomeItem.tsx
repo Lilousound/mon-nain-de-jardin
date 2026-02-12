@@ -3,16 +3,7 @@ import Image from 'next/image'
 import '../styles/GnomeItem.css'
 import GnomeAttributesScale from './GnomeAttributesScale'
 import GnomeModal from './GnomeModal'
-
-interface GnomeItemProps {
-  name: string;
-  cover: string;
-  id: number;
-  resistance: number;
-  rarity: number;
-  price: number;
-  description: string;
-}
+import { GnomeItemProps } from '../types'
 
 
 function GnomeItem({name, cover, id, resistance, rarity, price, description}: GnomeItemProps) {

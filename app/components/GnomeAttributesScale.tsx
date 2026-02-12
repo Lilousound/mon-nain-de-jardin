@@ -1,11 +1,8 @@
 'use client';
 import { useState } from 'react';
 import '../styles/Layout.css'
+import { GnomeAttributesScaleProps } from '../types';
 
-interface GnomeAttributesScaleProps {
-  scaleValue: number;
-  specificity: 'rarity' | 'resistance';
-}
 
 function GnomeAttributesScale ({ scaleValue, specificity }: GnomeAttributesScaleProps) {
   const [showTooltip, setShowTooltip] = useState(false); // État pour gérer l'affichage du tooltip

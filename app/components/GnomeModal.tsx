@@ -2,17 +2,7 @@ import Image from 'next/image'
 import GnomeAttributesScale from './GnomeAttributesScale'
 import '../styles/GnomeModal.css'
 import React from 'react'
-
-interface GnomeModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  name: string;
-  price: number;
-  cover: string;
-  resistance: number;
-  rarity: number;
-  description: string;
-}
+import { GnomeModalProps } from '../types'
 
 export default function GnomeModal({isOpen, onClose, name, price, cover, resistance, rarity, description}: GnomeModalProps) {
   if (!isOpen) return null;

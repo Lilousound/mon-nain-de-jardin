@@ -4,15 +4,9 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image'
 import trash from "../assets/trash.png"
 import shoppingCart from "../assets/shopping-cart.png"
+import { CartProps } from "../types"
 
-interface CartProps {
-  cart: {
-    name: string;
-    price: number;
-    amount: number;
-  }[];
-  updateCart: (newCart: CartProps['cart']) => void;
-}
+
 
 function Cart({cart, updateCart}: CartProps) {
   const [isOpen, setIsOpen] = useState(false);

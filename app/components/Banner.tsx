@@ -1,8 +1,6 @@
 import '../styles/Banner.css'
+import { BannerProps } from '../types'
 
-interface BannerProps {
-  children: React.ReactNode;
-}
 
 function Banner({ children }: BannerProps) {
     return <div className="banner">{children}</div>
